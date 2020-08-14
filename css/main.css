@@ -7,14 +7,14 @@ html {
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
 	font-size: 1em;
 }
 
 .container{
   max-width: 1200px;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,7 @@ h4 {
 	color: black;
 	text-transform: uppercase;
 	font-weight: 700;
-  width: 100%;
+  
 }
 h1 {
 	font-size: 1.875em;
@@ -46,72 +46,75 @@ h4 {
 p {
 	font-size: 0.875em;
 	line-height: 21px;
-  padding: 0 20px;
+    padding: 0 20px;
 }
 
+ul {
+    margin: 0;
+}
 /*The widths are in a percentage!*/
 header {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  width: 100%;
+  text-align: center;  
+  width: 100%; 
+  border-bottom: 3px solid #77a466;
 
 }
 
 header h1 {
-	display: flex;
-  justify-content: center;
-  align-items: center;
 	margin: 0;
 	padding: 30px 20px;
-  border-bottom: 2px solid #77a466;
+    border-bottom: 2px solid #77a466;
+    width: 100%;
 }
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-  display: flex;
-  flex-direction: column;
-
+text-transform: uppercase; 
+text-decoration: none;
+color:#77a466;
+padding: 20px 0; 
+width: 100%; 
+    
 }
 header nav ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-
+ margin: 0;
+ padding: 0;
 }
+
 header nav ul li {
-  display: flex;
-  flex-direction: column;
-	text-transform: uppercase;
+    text-transform: uppercase;
 	font-weight: 700;
-	font-size: 0.875em;
-
-
+	font-size: .875em;
+    padding: 10px 0;
+    list-style: none;
 
 }
 header nav ul li a{
-  display: flex;
-  flex-direction: column;
-	text-decoration: none;
-	color:#77a466;
-  line-height: 30px;
-
+    
+    text-decoration: none;
+	color: #77a466;
 }
 
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 
 }
 
 .main-image {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+
+}
 
 
 }
@@ -128,79 +131,44 @@ header nav ul li a{
   padding: 0 10px;
 }
 .main-title h3 {
-  display: flex;
-  flex-direction: column;
-	color: #77a466;
-  padding: 0 10px;
+  text-align: left;
+	padding: 5px 0;
+    color: #77a466;
+    font-size: 1.125em;
 }
 .main-title p {
-  display: flex;
-  flex-direction: column;
-	font-size: 1em;
-	line-height: 25px;
-  padding: 0 10px;
+    font-size: 1em;
+    line-height: 25px;
+    padding: 0;
 }
 
 .section-one,
 .section-two,
 .section-three {
-  display: flex;
-  flex-direction: column;
-	border-top: 1px solid #eee;
-  align-items: flex-start;
-  padding: 0 10px;
+ border-top: 1px solid #eee;
+ width: 100%;
 
 }
 
-.section-one h4 {
-  display: flex;
-  flex-direction: column;
-  padding: 0 10px;
-
-}
-
-.section-two {
-  display: flex;
-  flex-direction: column;
-  padding: 0 10px;
-
-}
-
-.section-two h4,
-.section-three h4 {
-  display: flex;
-  flex-direction: column;
-  padding: 0 10px;
-
-
-}
 
 .menu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
+    list-style: none;
+	padding: 0;
 }
 .menu li {
-  display: flex;
-  flex-direction: column;
-  line-height: 30px;
-	color:#77a466;
-  padding: 0 -5px;
+  
+line-height: 30px;
+color:#77a466;
 
 }
 
 .reviews {
-  display: flex;
-  flex-direction: column;
 	color: #333;
 	font-size: 1em;
 	line-height: 21px;
 }
 
 .address {
-  display: flex;
-  flex-direction: column;
 	font-size: 1em;
 	line-height: 24px;
 
@@ -208,12 +176,14 @@ header nav ul li a{
 
 /*The widths are in a percentage!*/
 footer {
-	display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-	height: 50px;
-	border-top: 3px solid #eee;
-	margin: 0 auto;
+  flex-flow: row wrap;  
+  border-top: 3px solid #eee;
+  width: 100%;
+  text-align: center;
+
 
 
 }
@@ -224,41 +194,45 @@ footer span {
 	font-size: 0.875em;
 }
 
-@media all and (min-width:768px) {
-    /* Tablet styles here */
-    .botton-section {
-
-
-    }
-    .section-one h4  {
-    flex-direction: row;
-
+@media only screen and (min-width: 768px) {
+    .bottom-section{
+        justify-content: space-between;
+        align-items: flex-start;
+        border-top: 1px solid #eee;
     }
 
-    .menu ul li {
-    flex-direction: row;
+    .section-one,
+    .section-two,
+    .section-three {
+        border-top: none;
+        flex-basis: 30%;
     }
 
-    .section-two h4 p {
-    flex-direction: row;
-    }
-
-    .reviews {
-    flex-direction: row;
-    }
-
-
-    .section-three h4 p{
-      flex-direction: row;
-
-    }
-
-    .address{
-      flex-direction: row;
+    .section-two {
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        padding: 0 20px;
     }
 }
 
-@media all and (min-width:1200px) {
-    /* Desktop styles here */
+@media only screen and (min-width: 1200px) {
+    header {
+        justify-content: space-between;
+    }
 
+    header h1 {
+        width: 30%;
+        padding: 0;
+        border-bottom: none;
+        text-align: left;
+    }
+
+    header nav {
+        width: 40%;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
 }
